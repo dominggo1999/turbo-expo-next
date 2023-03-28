@@ -1,11 +1,28 @@
 import React from "react";
-import { Text, View } from "react-native";
+import { Text } from "react-native";
+import { SafeAreaView } from "react-native-safe-area-context";
+import { Stack } from "expo-router";
+
+import { twColor } from "./config/tailwind";
 
 const Index = () => {
   return (
-    <View className="h-full w-full p-4">
-      <Text className="text-white">Hello world</Text>
-    </View>
+    <SafeAreaView className="flex-1 bg-background-500 text-white">
+      <Stack.Screen
+        options={{
+          headerTitleStyle: {
+            color: "white",
+          },
+          headerStyle: {
+            backgroundColor: twColor("primary", "500"),
+          },
+        }}
+      />
+
+      <Text className="text-white">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minima, esse?
+      </Text>
+    </SafeAreaView>
   );
 };
 

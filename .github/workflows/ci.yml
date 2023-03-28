@@ -52,4 +52,4 @@ jobs:
         if: matrix.job == 'ui-components-test'
         uses: cypress-io/github-action@v5
         with:
-          command: pnpm --dir ./packages/ui/ test
+          command: pnpm --dir ./packages/ui-website/ test

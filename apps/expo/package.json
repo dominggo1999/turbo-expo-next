@@ -4,7 +4,6 @@
   "main": "index.tsx",
   "scripts": {
     "clean": "git clean -xdf .expo .turbo node_modules",
-    "dev:ui": "UI_ONLY=true && expo start --android",
     "dev": "expo start --android",
     "dev:android": "expo start --android",
     "dev:ios": "expo start --ios",

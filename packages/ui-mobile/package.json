@@ -1,8 +1,8 @@
 {
   "name": "@acme/ui-mobile",
   "version": "0.1.0",
-  "main": "src/components/index.ts",
-  "types": "src/components/index.ts",
+  "main": "index.tsx",
+  "types": "index.tsx",
   "scripts": {
     "clean": "git clean -xdf .expo .turbo node_modules",
     "dev": "expo start --android",

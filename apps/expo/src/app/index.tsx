@@ -94,7 +94,7 @@ const Index = () => {
         <Box />
 
         <Container>
-          <Button>Test</Button>
+          <Button>test</Button>
           <Button>Test</Button>
           <Button>Test</Button>
           <Button>Test</Button>

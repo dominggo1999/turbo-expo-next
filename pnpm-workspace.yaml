@@ -3,4 +3,5 @@ packages:
   - apps/expo
   - packages/config/*
   - packages/ui-website
+  - packages/ui-mobile
   - packages/types

@@ -10,7 +10,7 @@ import {
 import { SafeAreaView } from "react-native-safe-area-context";
 import { Stack } from "expo-router";
 
-import { twColor } from "./config/tailwind";
+import { Box, Button, Container, twColor } from "@acme/ui-mobile";
 
 interface BadgeProps extends TouchableOpacityProps {
   text: string;
@@ -91,6 +91,29 @@ const Index = () => {
           )}
           contentContainerStyle={{ paddingLeft: 20, columnGap: 10 }}
         />
+        <Box />
+
+        <Container>
+          <Button>Test</Button>
+          <Button>Test</Button>
+          <Button>Test</Button>
+          <Button>Test</Button>
+          <Button>Test</Button>
+          <Text>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit
+            voluptatem repellat rem inventore, qui, dolor minus voluptates sit
+            velit at natus error optio suscipit laudantium quae obcaecati
+            reiciendis culpa libero in est eius? Dolor nisi placeat labore
+            consectetur doloremque quidem est, harum enim ipsam pariatur numquam
+            voluptates, nemo cupiditate veritatis iure aspernatur? Facere
+            delectus reiciendis tempora fuga totam dolorem odio est, eius
+            doloribus exercitationem, dicta vitae, tempore asperiores corrupti
+            minima aperiam quae odit enim sit soluta nisi quibusdam repellendus.
+            Quia omnis ab in provident officiis quam accusantium? Dolor
+            laudantium, repellat, debitis nemo numquam commodi libero
+            asperiores, nihil quia perspiciatis dicta.
+          </Text>
+        </Container>
       </ScrollView>
     </SafeAreaView>
   );

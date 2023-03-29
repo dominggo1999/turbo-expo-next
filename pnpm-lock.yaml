@@ -41,6 +41,7 @@ importers:
     specifiers:
       '@acme/eslint-config': '*'
       '@acme/tailwind-config': '*'
+      '@acme/ui-mobile': '*'
       '@babel/core': ^7.20.0
       '@babel/preset-env': ^7.20.0
       '@babel/runtime': ^7.20.0
@@ -73,6 +74,7 @@ importers:
       tailwindcss: ^3.2.4
       typescript: ^4.9.4
     dependencies:
+      '@acme/ui-mobile': link:../../packages/ui-mobile
       '@shopify/flash-list': 1.4.0_ayyqkr6ttoje2cgwlshoqqrvhm
       '@tanstack/react-query': 4.28.0_rn3qun46chv63cytpfol3dndvi
       '@trpc/client': 10.18.0_@trpc+server@10.18.0
@@ -218,6 +220,81 @@ importers:
       typescript: ^4.9.4
     devDependencies:
       eslint: 8.36.0
+      typescript: 4.9.5
+
+  packages/ui-mobile:
+    specifiers:
+      '@acme/eslint-config': '*'
+      '@acme/tailwind-config': '*'
+      '@babel/core': ^7.20.0
+      '@babel/preset-env': ^7.20.0
+      '@babel/runtime': ^7.20.0
+      '@expo/config-plugins': ^6.0.1
+      '@shopify/flash-list': 1.4.0
+      '@tanstack/react-query': ^4.28.0
+      '@trpc/client': ^10.18.0
+      '@trpc/react-query': ^10.18.0
+      '@trpc/server': ^10.18.0
+      '@types/react': ^18.0.29
+      '@types/webpack-env': ^1.18.0
+      axios: ^1.3.3
+      class-variance-authority: ^0.4.0
+      clsx: ^1.2.1
+      eslint: ^8.36.0
+      expo: ^48.0.9
+      expo-constants: ~14.2.1
+      expo-font: ^11.1.1
+      expo-linking: ~4.0.1
+      expo-router: ^1.3.0
+      expo-splash-screen: ~0.18.1
+      expo-status-bar: ~1.4.4
+      nativewind: ^2.0.11
+      postcss: ^8.4.19
+      react: 18.2.0
+      react-dom: 18.2.0
+      react-native: 0.71.4
+      react-native-dotenv: ^3.4.8
+      react-native-safe-area-context: 4.5.0
+      react-native-screens: ~3.20.0
+      superjson: 1.9.1
+      tailwindcss: ^3.2.4
+      typescript: ^4.9.4
+    dependencies:
+      '@shopify/flash-list': 1.4.0_ayyqkr6ttoje2cgwlshoqqrvhm
+      '@tanstack/react-query': 4.28.0_rn3qun46chv63cytpfol3dndvi
+      '@trpc/client': 10.18.0_@trpc+server@10.18.0
+      '@trpc/react-query': 10.18.0_rcvfzig2xktluz4p7kugxqlbwi
+      '@trpc/server': 10.18.0
+      axios: 1.3.4
+      class-variance-authority: 0.4.0_typescript@4.9.5
+      clsx: 1.2.1
+      expo: 48.0.9_@babel+core@7.21.3
+      expo-constants: 14.2.1_expo@48.0.9
+      expo-font: 11.1.1_expo@48.0.9
+      expo-linking: 4.0.1_expo@48.0.9
+      expo-router: 1.4.2_qkt567x7xxhls24xn3icvtsple
+      expo-splash-screen: 0.18.1_expo@48.0.9
+      expo-status-bar: 1.4.4
+      nativewind: 2.0.11_dmdrd7wro7is5ymtgffolhsaq4
+      react: 18.2.0
+      react-dom: 18.2.0_react@18.2.0
+      react-native: 0.71.4_klxfafkpjmb2537xfoky62a7f4
+      react-native-dotenv: 3.4.8_@babel+runtime@7.21.0
+      react-native-safe-area-context: 4.5.0_asg77qyzeoxodznpkubmbgme7u
+      react-native-screens: 3.20.0_asg77qyzeoxodznpkubmbgme7u
+      superjson: 1.9.1
+    devDependencies:
+      '@acme/eslint-config': link:../config/eslint
+      '@acme/tailwind-config': link:../config/tailwind
+      '@babel/core': 7.21.3
+      '@babel/preset-env': 7.20.2_@babel+core@7.21.3
+      '@babel/runtime': 7.21.0
+      '@expo/config-plugins': 6.0.1
+      '@types/react': 18.0.30
+      '@types/webpack-env': 1.18.0
+      eslint: 8.36.0
+      postcss: 8.4.21
+      tailwindcss: 3.2.7_postcss@8.4.21
       typescript: 4.9.5
 
   packages/ui-website:

@@ -13,6 +13,10 @@ const links = [
     path: "/container",
     name: "Container",
   },
+  {
+    path: "/fetch-card",
+    name: "React Query",
+  },
 ];
 
 const Index = () => {

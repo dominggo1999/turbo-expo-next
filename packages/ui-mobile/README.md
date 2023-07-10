@@ -1,0 +1,3 @@
+- [ ] Use react native storybook
+- [ ] Move src/config/tailwind to packages/config/tailwind
+- [ ] Make sure apps/expo use the correct dependencies similar to this one

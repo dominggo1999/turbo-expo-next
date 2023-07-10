@@ -1,8 +1,6 @@
 import React from "react";
-import { ScrollView, Text } from "react-native";
-import { SafeAreaView } from "react-native-safe-area-context";
-
-import { Container } from "../components";
+import { SafeAreaView, ScrollView, Text } from "react-native";
+import { Container, Button } from "../components";
 import { Screen } from "../helper";
 
 const ButtonPage = () => {
@@ -26,6 +24,25 @@ const ButtonPage = () => {
             laboriosam porro voluptatem? Recusandae laboriosam harum, non
             dignissimos ea, deserunt voluptate nobis ad, magnam autem officia.
           </Text>
+        </Container>
+        <Container>
+          <Button
+            tailwind="bg-red-500 mt-10"
+            onPress={() => {
+              console.log("Yuhu");
+            }}
+          >
+            Hello
+          </Button>
+
+          <Button
+            tailwind="mt-10"
+            variant={"secondary"}
+            isAspectSquare
+            isRounded
+          >
+            gg
+          </Button>
         </Container>
       </ScrollView>
     </SafeAreaView>

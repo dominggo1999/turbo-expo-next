@@ -1,6 +1,5 @@
 import React from "react";
-import { SafeAreaView, ScrollView } from "react-native";
-
+import { ScrollView, SafeAreaView } from "react-native";
 import { Button, Container } from "../components";
 import { Column, Flex, Screen } from "../helper";
 

@@ -50,19 +50,6 @@ const buttonCva = cva(
   },
 );
 
-const hoverCva = cva("", {
-  variants: {
-    variant: {
-      primary: "bg-primary-400",
-      secondary: "bg-secondary-400",
-      danger: "bg-danger-400",
-    },
-  },
-  defaultVariants: {
-    variant: "primary",
-  },
-});
-
 const textCva = cva("text-white font-medium", {
   variants: {
     size: {
@@ -85,66 +72,40 @@ export interface ButtonProps
   extends PressableProps,
     VariantProps<typeof buttonCva> {
   children: TextProps["children"];
+  tailwind?: string;
 }
 
-const Button = forwardRef<View, ButtonProps>(
-  ({ children, onPressIn, onPress, ...props }, ref) => {
-    const [hoverClassName, setHoverClassName] = useState("");
+const Button = forwardRef<View, ButtonProps>(({ children, ...props }, ref) => {
+  const {
+    variant,
+    size,
+    fullWidth,
+    isDisabled,
+    isRounded,
+    isAspectSquare,
+    tailwind,
+  } = props;
 
-    const {
-      variant,
-      size,
-      fullWidth,
-      isDisabled,
-      className = "",
-      isRounded,
-      isAspectSquare,
-    } = props;
-
-    const handlePressIn = useCallback(
-      (e: GestureResponderEvent) => {
-        onPressIn && onPressIn(e);
-        setHoverClassName(
-          hoverCva({
-            variant: variant,
-          }),
-        );
-      },
-      [onPressIn, variant],
-    );
-
-    const handlePressOut = useCallback(
-      (e: GestureResponderEvent) => {
-        onPress && onPress(e);
-        setHoverClassName("");
-      },
-      [onPress],
-    );
-
-    return (
-      <Pressable
-        onPressIn={handlePressIn}
-        onPressOut={handlePressOut}
-        disabled={isDisabled}
-        className={clsx(
-          buttonCva({
-            variant,
-            size,
-            fullWidth,
-            isRounded,
-            isAspectSquare,
-            isDisabled,
-          }),
-          className,
-          hoverClassName,
-        )}
-        {...props}
-        ref={ref}
-      >
-        <Text className={textCva({ size, isAspectSquare })}>{children}</Text>
-      </Pressable>
-    );
-  },
-);
+  return (
+    <Pressable
+      disabled={isDisabled}
+      className={clsx(
+        buttonCva({
+          variant,
+          size,
+          fullWidth,
+          isRounded,
+          isAspectSquare,
+          isDisabled,
+        }),
+        tailwind,
+      )}
+      {...props}
+      ref={ref}
+    >
+      <Text className={textCva({ size, isAspectSquare })}>{children}</Text>
+    </Pressable>
+  );
+});
 
 export default Button;

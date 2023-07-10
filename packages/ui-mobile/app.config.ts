@@ -29,10 +29,11 @@ const defineConfig = (): ExpoConfig => ({
   },
   extra: {
     eas: {
-      projectId: "your-ui-mobile-id",
+      projectId: "67683fb4-6f39-448f-ab9a-00834893dc59",
     },
   },
-  plugins: ["./expo-plugins/with-modify-gradle.js"],
+  plugins: ["./expo-plugins/with-modify-gradle.js", "expo-router"],
+  owner: "arnold_ds",
 });
 
 export default defineConfig;

@@ -1,7 +1,6 @@
 import React from "react";
-import { FlatList, Pressable, SafeAreaView, Text } from "react-native";
+import { FlatList, Pressable, Text, SafeAreaView } from "react-native";
 import { Link, Stack } from "expo-router";
-
 import { Container } from "../components";
 import { twColor } from "../config/tailwind";
 
